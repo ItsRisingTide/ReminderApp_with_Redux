@@ -1,0 +1,96 @@
+.container {
+    width: 100%;
+    min-height: 45px;
+    overflow: hidden;
+
+    &:hover {
+        background-color: lighten($color: #262f3e, $amount: 10);
+    }
+
+    // background-color: darkmagenta;
+}
+
+.container_active {
+    width: 90%;
+    min-height: 45px;
+    background-color: lighten($color: #262f3e, $amount: 15);
+    overflow: hidden;
+}
+
+%text {
+    padding: 10px 0;
+    margin: auto;
+    width: 60%;
+    text-align: left;
+
+
+    color: #ffffff;
+    font-family: Roboto, sans-serif;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: normal;
+    line-height: 25.6px;
+    text-transform: none;
+
+    &:after {
+        content: '';
+        display: block;
+        width: 0%;
+        height: 3px;
+        background: #ffffff;
+        transition: width .3s;
+    }
+
+    // &:hover {
+    //     &:after {
+    //         width: 100%;
+    //     }
+    // }
+
+}
+
+.text {
+    @extend %text;
+}
+
+.text_underline {
+    @extend %text;
+
+    &:after {
+        width: 100%;
+    }
+}
+
+.list_item {
+    display: flex;
+    flex-direction: row;
+
+    &:hover {
+        background-color: lighten($color: #262f3e, $amount: 10);
+    }
+}
+
+.list_item_active {
+    display: flex;
+    flex-direction: row;
+    background-color: lighten($color: #262f3e, $amount: 15);
+}
+
+$grey: #cec9c9;
+
+.delete_icon {
+    padding: 4px;
+    width: 10%;
+    height: auto;
+    transform: rotate(-45deg);
+    fill: $grey;
+
+    &:hover {
+        fill: #ffffff;
+    }
+}
+
+.delete_icon_active {
+    display: none;
+}

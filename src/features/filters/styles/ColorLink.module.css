@@ -1,0 +1,70 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.green, .green_clicked, .blue, .blue_clicked, .purple, .purple_clicked {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  margin-right: 8px;
+}
+
+.green::after, .green_clicked::after, .blue::after, .blue_clicked::after, .purple::after, .purple_clicked::after {
+  /* padding: 16px; */
+  height: 33px;
+  width: 33px;
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  border-radius: 50%;
+}
+
+.green {
+  background-color: #7fd125;
+  border: 2px solid #65a61d;
+}
+
+.green_clicked {
+  background-color: #7fd125;
+  border: 3px solid #4a7a16;
+}
+
+.green_clicked::after {
+  border: 2px solid #b1e775;
+}
+
+.blue {
+  background-color: #4b8fdf;
+  border: 2px solid #2575d2;
+}
+
+.blue_clicked {
+  background-color: #4b8fdf;
+  border: 3px solid #1e5ca6;
+}
+
+.blue_clicked::after {
+  border: 2px solid #a2c5ee;
+}
+
+.purple {
+  background-color: #8f13fd;
+  border: 2px solid #7502db;
+}
+
+.purple_clicked {
+  background-color: #8f13fd;
+  border: 3px solid #5a01a9;
+}
+
+.purple_clicked::after {
+  border: 2px solid #bf78fe;
+}
+/*# sourceMappingURL=ColorLink.module.css.map */

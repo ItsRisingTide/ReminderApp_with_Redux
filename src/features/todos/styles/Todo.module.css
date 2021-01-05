@@ -1,0 +1,58 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  min-height: 56px;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.label_green, .label_blue, .label_purple {
+  width: 7px;
+  border-right: 1px solid #e9e9e9;
+  border-top-left-radius: 12px 50%;
+  border-bottom-left-radius: 12px 50%;
+}
+
+.label_green {
+  background-color: #7fd125;
+}
+
+.label_blue {
+  background-color: #4b8fdf;
+}
+
+.label_purple {
+  background-color: #8f13fd;
+}
+
+.content {
+  width: 97%;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom: 1px solid #e9e9e9;
+  border-top: 1px solid #e9e9e9;
+  border-right: 1px solid #e9e9e9;
+  color: #4d5f7d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: left;
+  padding: 2px;
+  padding-left: 10px;
+  font-size: 21px;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+}
+/*# sourceMappingURL=Todo.module.css.map */

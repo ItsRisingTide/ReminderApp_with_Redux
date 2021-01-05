@@ -1,27 +1,35 @@
-import React from 'react'
-import { useDispatch } from "react-redux"
-import { toggleTodo } from "./todoSlice"
+import React from "react";
+import { useDispatch } from "react-redux";
+import { toggleTodo } from "./todoSlice";
+import s from "./styles/Todo.module.css";
 
-const Todo = ({ text, id, completed }) => {
+const Todo = ({ text, color, id, completed }) => {
+  //this dubious thing i have to do because changing css propeties
+  //don't work well with scss modules
 
-    const dispatch = useDispatch()
+  const labelColorStyles = {
+    green: `${s.label_green}`,
+    blue: `${s.label_blue}`,
+    purple: `${s.label_purple}`,
+  };
 
-    return (
-        <>
-            <div >
-                <div
-                    className="s"
-                    onClick={() => dispatch(toggleTodo(id))}
-                    style={{
-                        textDecoration: completed ? 'line-through' : 'none'
-                    }}>
-                    {text}
-                </div>
-                <div className="s">ID: {id}</div>
-            </div>
-        </>
-    )
-}
+  const dispatch = useDispatch();
+  return (
+    <>
+      <div className={s.container}>
+        <div className={labelColorStyles[color]}></div>
+        <div
+          className={s.content}
+          onClick={() => dispatch(toggleTodo(id))}
+          style={{
+            textDecoration: completed ? "line-through" : "none",
+          }}
+        >
+          {text}
+        </div>
+      </div>
+    </>
+  );
+};
 
 export default Todo;
-

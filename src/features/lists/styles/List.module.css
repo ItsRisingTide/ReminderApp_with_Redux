@@ -1,0 +1,88 @@
+.container {
+  width: 100%;
+  min-height: 45px;
+  overflow: hidden;
+}
+
+.container:hover {
+  background-color: #39475e;
+}
+
+.container_active {
+  width: 90%;
+  min-height: 45px;
+  background-color: #43536d;
+  overflow: hidden;
+}
+
+.text, .text_underline {
+  padding: 10px 0;
+  margin: auto;
+  width: 60%;
+  text-align: left;
+  color: #ffffff;
+  font-family: Roboto, sans-serif;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: normal;
+  line-height: 25.6px;
+  text-transform: none;
+}
+
+.text:after, .text_underline:after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 3px;
+  background: #ffffff;
+  -webkit-transition: width .3s;
+  transition: width .3s;
+}
+
+.text_underline:after {
+  width: 100%;
+}
+
+.list_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.list_item:hover {
+  background-color: #39475e;
+}
+
+.list_item_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #43536d;
+}
+
+.delete_icon {
+  padding: 4px;
+  width: 10%;
+  height: auto;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  fill: #cec9c9;
+}
+
+.delete_icon:hover {
+  fill: #ffffff;
+}
+
+.delete_icon_active {
+  display: none;
+}
+/*# sourceMappingURL=List.module.css.map */

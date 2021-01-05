@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+$green: #7fd125;
+$blue: #4b8fdf;
+$purple: #8f13fd;
+$grey: #cec9c9;
+
+
+.form {
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+//Input
+
+.input {
+    border: none;
+    background-color: #f5f5f5;
+    width: 74%;
+    height: 45px;
+    -webkit-appearance: none;
+    padding-left: 5px;
+
+    &:hover {
+        background-color: darken($color:#f5f5f5, $amount: 2);
+    }
+
+    &::placeholder {
+        font-size: 20px;
+        font-weight: 300;
+        font-family: 'Roboto',
+            sans-serif;
+    }
+
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Roboto',
+    sans-serif;
+}
+
+.input:focus:focus {
+    border: none;
+    outline-offset: 0px;
+    outline: none;
+}
+
+//--------
+
+// Button
+
+%add_button {
+    border: none;
+    width: 20%;
+    height: 45px;
+    background-color: darken($color: #b8b8b8, $amount: 15);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+        background-color: darken($color: #b8b8b8, $amount: 5);
+    }
+
+    &:focus {
+        border: none;
+        outline-offset: 0px;
+        outline: none;
+    }
+
+    &:after {
+        content: "";
+        // background: #1abc9c;
+        display: block;
+        position: absolute;
+        padding-top: 300%;
+        padding-left: 350%;
+        margin-left: -20px !important;
+        margin-top: -120%;
+        opacity: 0;
+        transition: all 0.8s
+    }
+
+    &:active:after {
+        padding: 0;
+        margin: 0;
+        opacity: 1;
+        transition: 0s
+    }
+}
+
+.add_button_green {
+    @extend %add_button;
+
+    &:after {
+        background-color: $green;
+    }
+}
+
+.add_button_blue {
+    @extend %add_button;
+
+    &:after {
+        background-color: $blue;
+    }
+}
+
+.add_button_purple {
+    @extend %add_button;
+
+    &:after {
+        background-color: $purple;
+    }
+}
+
+//-------------- 
+
+//Color menu
+
+$green: #7fd125;
+$blue: #4b8fdf;
+$purple: darken(#8f13fd, 5);
+
+%rounded {
+    height: 54px;
+    width: 6%;
+    // border-top-right-radius: 70% 40%;
+    // border-bottom-right-radius: 70% 40%;
+    border-top-right-radius: 17px 8px;
+    border-bottom-right-radius: 15px 8px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.6s;
+}
+
+%solid {
+    height: 45px;
+    width: 3%;
+}
+
+.green_rounded {
+    @extend %rounded;
+    background-color: $green;
+
+    &:hover {
+        background-color: darken($color: $green, $amount: 5);
+    }
+}
+
+.blue_rounded {
+    @extend %rounded;
+    background-color: $blue;
+
+    &:hover {
+        background-color: darken($color: $blue, $amount: 5);
+    }
+}
+
+.purple_rounded {
+    @extend %rounded;
+    background-color: $purple;
+
+    &:hover {
+        background-color: darken($color: $purple, $amount: 5);
+    }
+}
+
+.transparent_rounded {
+    @extend %rounded;
+    background-color: tran;
+}
+
+.color_menu {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    transition: top 0.5s;
+    // background-color: black;
+}
+
+.color_menu_hidden {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 55px;
+    transition: top 0.5s;
+
+}
+
+%option {
+    width: 100%;
+    height: 33.3333%
+}
+
+.option_green {
+    @extend %option;
+    background-color: $green;
+
+    &:hover {
+        background-color: darken($color: $green, $amount: 2);
+    }
+}
+
+.option_blue {
+    @extend %option;
+    background-color: $blue;
+
+    &:hover {
+        background-color: darken($color: $blue, $amount: 5);
+    }
+}
+
+.option_purple {
+    @extend %option;
+    background-color: $purple;
+
+    &:hover {
+        background-color: darken($color: $purple, $amount: 7);
+    }
+}

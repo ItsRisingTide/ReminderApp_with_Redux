@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+.form {
+  margin-top: 20px;
+  margin-left: 15px;
+  margin-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.input {
+  border: none;
+  background-color: #f5f5f5;
+  width: 74%;
+  height: 45px;
+  -webkit-appearance: none;
+  padding-left: 5px;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+}
+
+.input:hover {
+  background-color: #f0f0f0;
+}
+
+.input::-webkit-input-placeholder {
+  font-size: 20px;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+}
+
+.input:-ms-input-placeholder {
+  font-size: 20px;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+}
+
+.input::-ms-input-placeholder {
+  font-size: 20px;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+}
+
+.input::placeholder {
+  font-size: 20px;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+}
+
+.input:focus:focus {
+  border: none;
+  outline-offset: 0px;
+  outline: none;
+}
+
+.add_button_green, .add_button_blue, .add_button_purple {
+  border: none;
+  width: 20%;
+  height: 45px;
+  background-color: #929292;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.add_button_green:hover, .add_button_blue:hover, .add_button_purple:hover {
+  background-color: #ababab;
+}
+
+.add_button_green:focus, .add_button_blue:focus, .add_button_purple:focus {
+  border: none;
+  outline-offset: 0px;
+  outline: none;
+}
+
+.add_button_green:after, .add_button_blue:after, .add_button_purple:after {
+  content: "";
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.add_button_green:active:after, .add_button_blue:active:after, .add_button_purple:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+.add_button_green:after {
+  background-color: #7fd125;
+}
+
+.add_button_blue:after {
+  background-color: #4b8fdf;
+}
+
+.add_button_purple:after {
+  background-color: #8f13fd;
+}
+
+.green_rounded, .blue_rounded, .purple_rounded, .transparent_rounded {
+  height: 54px;
+  width: 6%;
+  border-top-right-radius: 17px 8px;
+  border-bottom-right-radius: 15px 8px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: background-color 0.6s;
+  transition: background-color 0.6s;
+}
+
+.green_rounded {
+  background-color: #7fd125;
+}
+
+.green_rounded:hover {
+  background-color: #72bb21;
+}
+
+.blue_rounded {
+  background-color: #4b8fdf;
+}
+
+.blue_rounded:hover {
+  background-color: #3582db;
+}
+
+.purple_rounded {
+  background-color: #8302f4;
+}
+
+.purple_rounded:hover {
+  background-color: #7502db;
+}
+
+.transparent_rounded {
+  background-color: tran;
+}
+
+.color_menu {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  -webkit-transition: top 0.5s;
+  transition: top 0.5s;
+}
+
+.color_menu_hidden {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 55px;
+  -webkit-transition: top 0.5s;
+  transition: top 0.5s;
+}
+
+.option_green, .option_blue, .option_purple {
+  width: 100%;
+  height: 33.3333%;
+}
+
+.option_green {
+  background-color: #7fd125;
+}
+
+.option_green:hover {
+  background-color: #7ac823;
+}
+
+.option_blue {
+  background-color: #4b8fdf;
+}
+
+.option_blue:hover {
+  background-color: #3582db;
+}
+
+.option_purple {
+  background-color: #8302f4;
+}
+
+.option_purple:hover {
+  background-color: #7002d1;
+}
+/*# sourceMappingURL=AddTodo.module.css.map */

@@ -1,0 +1,75 @@
+*{
+    padding : 0px;
+    margin : 0px;
+    box-sizing: border-box;
+}
+
+$green: #7fd125;
+$blue: #4b8fdf;
+$purple: #8f13fd;
+$grey: #cec9c9;
+
+%circle{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    position: relative;
+    margin-right: 8px;
+
+    &::after{
+        /* padding: 16px; */
+        height: 33px;
+        width: 33px;
+        content: "";
+        position: absolute;
+        top: 50%; right: 50%;
+        transform: translate(50%,-50%);
+        border-radius: 50%;
+    }
+}
+
+.green{
+    @extend %circle;
+    background-color: $green;
+    border: 2px solid darken($color: $green , $amount: 10);
+}
+
+.green_clicked{
+    @extend %circle;
+    background-color: $green;
+    border: 3px solid darken($color: $green , $amount: 20);
+
+    &::after{
+        border: 2px solid lighten($color: #7fd125 , $amount: 20);
+    }
+}
+
+.blue{
+@extend %circle;
+background-color: $blue;
+border: 2px solid darken($color: $blue , $amount: 10);
+}
+
+.blue_clicked{
+    @extend %circle;
+    background-color: $blue;
+    border: 3px solid darken($color: $blue , $amount: 20);
+    &::after{
+        border: 2px solid lighten($color: #4b8fdf , $amount: 20);
+    }
+}
+
+.purple{
+    @extend %circle;
+    background-color: $purple;
+    border: 2px solid darken($color: $purple , $amount: 10);
+    }
+
+.purple_clicked{
+    @extend %circle;
+    background-color: $purple;
+    border: 3px solid darken($color: $purple , $amount: 20);
+    &::after{
+        border: 2px solid lighten($color: #8f13fd , $amount: 20);
+    }
+}

@@ -1,0 +1,50 @@
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-left: 15px;
+    margin-right: 20px;
+    height: 50px
+}
+
+.footer_text{
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    margin-right: 3px;
+}
+
+.footer_text2{
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    margin-right: 10px;
+}
+
+
+.footer_colors{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_button{
+    padding: 2px;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+
+    /* background-color: red; */
+    border: none;
+    margin-left: 2px;
+}
+
+.footer_button:focus{
+    border: none;
+    outline-offset: 0px;
+    outline: none;
+}
